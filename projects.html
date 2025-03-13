@@ -1,0 +1,152 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Elijah's Portfolio</title>
+  </head>
+</html>
+<body>
+  <header>
+    <h2 class="header-title">Elijah's Portfolio</h2>
+    <nav id="navbar">
+      <ul id="nav-list">
+        <!-- the list of all navigation links -->
+        <li><a class="link-style" href="index.html">Home</a></li>
+        <li><a class="link-style" href="projects.html">Projects</a></li>
+        <li><a class="link-style" href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+  <!-- here starts the projects -->
+  <!-- GEARBOX -->
+  <div id="gear-grid" class="project-grid">
+    <div id="gearbox-videos">
+      <div id="gearbox-vid-1-box">
+        <video class="project-video" autoplay loop muted playsinline>
+          <source src="pics/gearbox-1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div id="gearbox-vid-2-box">
+        <video class="project-video" autoplay loop muted playsinline>
+          <source src="pics/gearbox-2.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <div class="text-box" id="gearbox-text-box">
+      <p id="gear-text" class="project-text">
+        <b>Gearbox Assembly - Mechanical Advantage Study:</b>
+        <br /><br />Designed and analyzed a gearbox assembly using SolidWorks
+        Motion Study to evaluate angular velocity and performance efficiency.
+        Developed a detailed CAD model to simulate real-world motion, optimizing
+        gear ratios for enhanced functionality. This project showcases the
+        ability to apply engineering principles, precision modeling, and motion
+        analysis to create efficient mechanical systems.
+      </p>
+    </div>
+  </div>
+  <hr class="horz-line" />
+  <!-- CAM -->
+  <div id="CAM-grid" class="project-grid">
+    <div class="text-box" id="CAM-text-box">
+      <p id="CAM-text" class="project-text">
+        <b>G-Code Generation for CNC Manufacturing:</b> <br /><br />Utilized CAM
+        to generate precise G-code for CNC machining. This specific example
+        shows the efficient and accurate manufacturing of 3D contours. Developed
+        a detailed toolpath strategy in SolidWorks to optimize material removal
+        and reduce machining time. This project demonstrates my experience in
+        CAD/CAM integration, CNC programming, and the manufacturing process.
+      </p>
+    </div>
+    <div id="CAM-video-box">
+      <video class="project-video" autoplay loop muted playsinline>
+        <source src="pics/CAM-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  <hr class="horz-line" />
+  <!-- PORTABLE LIFT -->
+  <div id="lift-grid" class="project-grid">
+    <div id="FEA-bracket-boxes">
+      <div class="FEA-box">
+        <img class="pic" src="pics/FEA-1.png" alt="FEA EX: 1" />
+      </div>
+      <div class="FEA-box">
+        <img class="pic" src="pics/FEA-2.png" alt="FEA EX: 2" />
+      </div>
+    </div>
+    <div class="lift-right">
+      <div id="portable-lift-box">
+        <img
+          class="pic"
+          id="lift-pic"
+          src="pics/Final Design Overview.jpg"
+          alt="Elijah's Senior Design Project"
+        />
+      </div>
+      <div class="text-box" id="lift-text-box">
+        <p id="lift-text" class="project-text">
+          <b
+            >Portable Arm Lift (Senior Design) - Structural Analysis & Prototype
+            Designed:</b
+          >
+          <br /><br />A wheelchair lift arm to assist individuals in
+          transferring from a seated position, focusing on stability, safety,
+          and portability. Utilized SolidWorks finite element analysis (FEA) to
+          simulate real-world loading conditions, ensuring the structure could
+          withstand the requirements while minimizing material weight. This
+          project highlights my skills in assistive device engineering,
+          structural analysis, and design optimization to create innovative,
+          real-world solutions. See
+          <a
+            href="https://www.youtube.com/watch?v=hmUXAQ5h438&t=4s"
+            target="_blank"
+            rel="noopener noreferrer"
+            >here</a
+          >
+          for the YouTube video.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr class="horz-line" />
+  <!-- ANSYS -->
+  <div id="ANSYS-grid" class="project-grid">
+    <div class="text-box" id="ANSYS-text-box">
+      <p id="ANSYS-text" class="project-text">
+        <b>Thermal, Force, and Displacement Analysis:</b> <br /><br />Conducted
+        in-depth simulations using FAU's ANSYS license to analyze the effects of
+        thermal loads, forces, and displacement on mechanical components.
+        Evaluated structural integrity under varying conditions, learning how to
+        optimize designs. This project showcases my experience in finite element
+        analysis (FEA), heat transfer studies, and mechanical stress evaluation
+        to enhance real-world engineering applications.
+      </p>
+    </div>
+    <div id="ANSYS-boxes">
+      <div class="ANSYS-box">
+        <img
+          class="pic"
+          src="pics/3D Von Mises Example Ansys.JPG"
+          alt="ANSYS EX: 1"
+        />
+      </div>
+      <div class="ANSYS-box">
+        <img
+          class="pic"
+          src="pics/Heat Sink Ansys Example.JPG"
+          alt="ANSYS EX: 2"
+        />
+      </div>
+      <div class="ANSYS-box">
+        <img
+          class="pic"
+          src="pics/Truss Structure Example Ansys.PNG"
+          alt="ANSYS EX: 3"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- end of projects -->
+</body>
