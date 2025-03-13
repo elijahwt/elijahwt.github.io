@@ -1,0 +1,899 @@
+/* Elijah's Portfolio CSS Code */
+
+:root {
+  --color1: #336bff; /*BLUE*/
+  --color2: #ffc300; /*YELLOW*/
+  --color3: red; /*RED*/
+  --color4: #f7f8f8; /*WHITE*/
+  --color5: black; /*BLACK*/
+  --color6: #cfcfcf; /*GRAY*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  /* background: linear-gradient(120deg, white, #f1f1f1 30%, gray); */
+  background-attachment: fixed;
+}
+
+/* -------- HEADER OF THE WEBSITE -------- */
+/* --------------------------------------- */
+
+header {
+  position: fixed;
+  z-index: 3;
+  background-color: var(--color1);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 12vw;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.23); /* Soft shadow */
+  width: 100vw;
+  height: 10vh;
+}
+
+.header-title {
+  font-size: 1.85rem; /*30px;*/
+  color: var(--color4);
+}
+
+#nav-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 9vw;
+  list-style-type: none; /* gets rid of bullet points */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color4);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  border: 0px solid black;
+  font-size: 1rem;
+}
+
+nav ul li:hover {
+  transform: scale(1.3);
+}
+
+nav ul li a:active {
+  color: var(--color2);
+}
+
+.header-spacer {
+  width: 100vw;
+  height: 10vh;
+}
+
+@media (max-width: 768px) {
+  /* HEADER MEDIA Q*/
+  header {
+    gap: 4vw;
+    width: 100vw;
+    height: 6vh;
+    justify-content: center;
+  }
+  .header-title {
+    font-size: 1rem; /*30px;*/
+  }
+  #nav-list {
+    gap: 7vw;
+  }
+  .header-spacer {
+    height: 6vh;
+  }
+}
+
+/* -------- HOME PAGE! -------- */
+/* ---------------------------- */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  height: 80vh;
+  width: 100%;
+  /* padding-top: 5vh; */
+}
+
+.left-column,
+.right-column {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vh;
+  border: 0px solid black;
+}
+
+#welcome {
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: helvetica;
+  text-wrap: wrap;
+}
+
+#summary {
+  font-size: 1.6rem;
+  margin-left: 2.6vw;
+  font-family: helvetica;
+  line-height: 1.6;
+  text-indent: 0px;
+  text-wrap: wrap;
+}
+
+#main-span {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+#profile-pic-box {
+  margin: 0; /* aligns block-level elements */
+  height: 70%;
+  width: 55%;
+  border: 2px solid var(--color6);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.655); /* Soft shadow */
+  border-radius: none;
+  text-align: center;
+}
+
+#profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#footer {
+  height: 10vh;
+  width: 100vw;
+  background-color: var(--color2);
+  border-top: 1px solid #cccccc73;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.61); /* Soft shadow */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+}
+
+#social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  gap: 15vw;
+  height: 100%;
+}
+
+.social-item {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  border: 0px solid black;
+  margin: 0;
+}
+
+.footer-item {
+  width: 20vw;
+  height: 3vh;
+  border: 0px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#linkedin-container {
+  height: 100%;
+  width: 14%;
+  border: 0px solid black;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkedin-pic {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  border: 0px solid black;
+  border-radius: 50%;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+/* b {
+  color: var(--color2);
+} */
+
+/* -------- HOME/MAIN MEDIA --------- Q*/
+/* Always add Media Qs after main CSS Code */
+@media (max-width: 1280px) {
+  .home-grid {
+    height: 75vh;
+    gap: 0;
+    overflow: scroll;
+    /* padding-top: 10vh; */
+  }
+  #main-span {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-grid {
+    height: 75vh;
+    gap: 0;
+    overflow: scroll;
+    /* padding-top: 10vh; */
+  }
+  #welcome {
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin-top: 0vh;
+  }
+  #summary {
+    margin-top: 1vh;
+    font-size: 1.4rem;
+    margin-left: 2.6vw;
+    line-height: 1.3;
+  }
+  #main-span {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  #profile-pic-box {
+    margin: 0;
+    height: 70%;
+    width: 90%;
+  }
+  #footer {
+    height: 12vh;
+    width: 100vw;
+  }
+  #social-links {
+    gap: 0vw;
+    height: 100%;
+    width: 100%;
+    border: 0px solid black;
+  }
+  #linkedin-container {
+    height: 100%;
+    width: 8%;
+    border: 0px solid black;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    height: 85vh;
+    gap: 0;
+    border: 0px solid black;
+  }
+  .left-column {
+    height: 100%;
+    width: 100%;
+    border: 0px solid black;
+    gap: 0.5vh;
+  }
+  .right-column {
+    height: 100%;
+    width: 100%;
+    border: 0px solid black;
+    gap: 0.5vh;
+  }
+  #welcome {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 0vh;
+  }
+  #summary {
+    margin-top: 1vh;
+    font-size: 1rem;
+    margin-left: 2.6vw;
+    line-height: 1.5;
+  }
+  #main-span {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  #profile-pic-box {
+    margin: 0;
+    height: 80%;
+    width: 55%;
+  }
+  #social-links {
+    gap: 0vw;
+    height: 100%;
+    width: 100%;
+    border: 0px solid black;
+  }
+  #linkedin-container {
+    height: 100%;
+    width: 10%;
+    border: 0px solid black;
+  }
+}
+
+@media (max-width: 540px) {
+  .left-column {
+    border: 0px solid red;
+    height: 85vw;
+  }
+  .right-column {
+    margin-top: -15vh;
+    border: 0px solid green;
+  }
+  #welcome {
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin-top: 0vh;
+  }
+  #summary {
+    margin-top: 1vh;
+    font-size: 0.8rem;
+    margin-left: 2.6vw;
+    line-height: 1.5;
+  }
+  #main-span {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  #profile-pic-box {
+    margin: 0;
+    height: 20vh;
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  #linkedin-container {
+    height: 100%;
+    width: 25%;
+    border: 0px solid black;
+  }
+}
+
+@media (max-width: 364px) {
+  #social-links {
+    gap: 0vw;
+    height: 100%;
+    width: 100%;
+    border: 0px solid black;
+  }
+  #linkedin-container {
+    height: 90%;
+    width: 22%;
+    border: 0px solid black;
+  }
+}
+
+/* -------- PROJECT SECTION! -------- */
+
+.text-box {
+  border: 0px solid black;
+  display: flex;
+  align-items: center;
+  height: 35%;
+  width: 84%;
+}
+
+.project-video,
+.pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-text {
+  font-family: helvetica;
+  font-size: 1.38rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  place-items: center;
+}
+
+.horz-line {
+  display: none;
+}
+
+/* --------------------------------- */
+
+/* GEARBOX */
+#gearbox-videos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  height: 50vh;
+  width: 100%;
+}
+
+#gearbox-vid-1-box,
+#gearbox-vid-2-box {
+  height: 46%;
+  width: 42%;
+  border: 1px solid black;
+  border-radius: none;
+  text-align: center;
+}
+
+/* CAM */
+#CAM-grid {
+  height: 70vh;
+}
+
+#CAM-video-box {
+  height: 52%;
+  width: 63%;
+  border: 1px solid black;
+  border-radius: none;
+  text-align: center;
+}
+
+/* LIFT */
+#lift-grid {
+  height: 100vh;
+}
+
+#portable-lift-box {
+  height: 80%;
+  width: 90%;
+  border: 1px solid black;
+  border-radius: none;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#lift-pic {
+  height: 120%;
+  width: 120%;
+  position: relative;
+  z-index: -1;
+  bottom: 10%;
+  right: 8.8%;
+}
+
+.lift-right {
+  width: 100%;
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7vh;
+}
+
+#FEA-bracket-boxes {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 0px solid black;
+}
+
+.FEA-box {
+  height: 50%;
+  width: 49%;
+  border: 1px solid black;
+  border-radius: none;
+  text-align: center;
+}
+
+/* ANSYS */
+#ANSYS-grid {
+  height: 165vh;
+}
+
+#ANSYS-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.ANSYS-box {
+  height: 28%;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: none;
+  text-align: center;
+}
+
+/* --------  PROJECT MEDIA Q ---------- */
+@media (max-width: 1280px) {
+  #gear-grid {
+    height: 140vh;
+  }
+  #gearbox-vid-1-box,
+  #gearbox-vid-2-box {
+    height: 90%;
+    width: 90%;
+  }
+  #CAM-grid {
+    height: 60vh;
+  }
+  #lift-grid {
+    height: 120vh;
+  }
+  #FEA-bracket-boxes {
+    height: 80%;
+    width: 95%;
+  }
+  .FEA-box {
+    height: 35%;
+    width: 80%;
+  }
+  #portable-lift-box {
+    height: 35%;
+    width: 90%;
+  }
+  #lift-pic {
+    height: 120%;
+    width: 120%;
+    bottom: 10%;
+    right: 8.8%;
+  }
+  .lift-right {
+    width: 105%;
+    height: 88%;
+    gap: 18vh;
+  }
+  #ANSYS-grid {
+    height: 130vh;
+  }
+}
+
+@media (max-width: 932px) {
+  .project-grid {
+    height: 140vh;
+    width: 100%;
+  }
+  #gear-grid {
+    height: 150vh;
+  }
+  #gearbox-vid-1-box,
+  #gearbox-vid-2-box {
+    height: 60%;
+    width: 60%;
+  }
+  #CAM-grid {
+    height: 150vh;
+  }
+  #CAM-video-box {
+    height: 29%;
+    width: 90%;
+  }
+  #lift-grid {
+    height: 300vh;
+  }
+  #portable-lift-box {
+    height: 23%;
+    width: 95%;
+  }
+  #lift-pic {
+    height: 120%;
+    width: 120%;
+    bottom: 10%;
+    right: 1%;
+  }
+  .lift-right {
+    width: 100%;
+    height: 88%;
+    gap: 50vh;
+  }
+  #FEA-bracket-boxes {
+    height: 50%;
+    width: 100%;
+  }
+  .FEA-box {
+    height: 40%;
+    width: 80%;
+  }
+  #ANSYS-grid {
+    height: 170vh;
+  }
+}
+
+@media (max-width: 767px) {
+  #gear-grid {
+    height: 200vh;
+  }
+  #gearbox-vid-1-box,
+  #gearbox-vid-2-box {
+    height: 90%;
+    width: 90%;
+  }
+  #CAM-grid {
+    height: 200vh;
+  }
+  #CAM-video-box {
+    height: 35%;
+    width: 90%;
+  }
+  #lift-grid {
+    height: 250vh;
+    position: relative;
+    top: -120vh;
+  }
+  .FEA-box {
+    height: 30%;
+    width: 85%;
+  }
+  .lift-right {
+    gap: 70vh;
+  }
+  #portable-lift-box {
+    height: 15%;
+    width: 95%;
+  }
+  #ANSYS-grid {
+    height: 210vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-box {
+    height: 90%;
+    width: 84%;
+  }
+  .project-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .horz-line {
+    display: block;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    place-items: center; /* Centers the child elements */
+  }
+  #gear-grid {
+    height: 110vh; /* 110vh originally */
+  }
+  #gearbox-videos {
+    gap: 0px;
+    border: 0px solid red;
+  }
+  #gearbox-vid-1-box,
+  #gearbox-vid-2-box {
+    height: 50%;
+    width: 70%;
+  }
+  #gearbox-text-box {
+    border: 0px solid navy;
+  }
+  #CAM-grid {
+    height: 100vh;
+  }
+  #CAM-video-box {
+    height: 60%;
+    width: 90%;
+    border-radius: none;
+    text-align: center;
+    margin-top: -20vh;
+  }
+  #lift-grid {
+    height: 145vh;
+    position: relative;
+    top: 0vh;
+    gap: 0vh;
+  }
+  .lift-right {
+    margin-top: -40vh;
+    width: 100vw;
+    height: 80vh;
+    gap: 25vh;
+    border: 0px solid yellow;
+  }
+  #portable-lift-box {
+    height: 80vw;
+    width: 30vh;
+  }
+  #lift-pic {
+    height: 120%;
+    width: 120%;
+  }
+  #lift-text-box {
+    border: 0px solid green;
+    height: 20%;
+  }
+  #FEA-bracket-boxes {
+    margin-top: -18vh;
+    height: 35vh;
+    width: 100%;
+    flex-direction: row;
+    border: 0px solid red;
+  }
+  .FEA-box {
+    height: 30vh;
+    width: 40vw;
+  }
+  #ANSYS-grid {
+    height: 150vh;
+    border: 0px solid navy;
+  }
+  #ANSYS-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px solid navy;
+    height: 60vh;
+  }
+  .ANSYS-box {
+    height: 20vh;
+    width: 80vw;
+    border-radius: none;
+    text-align: center;
+  }
+  #ANSYS-text-box {
+    border: 0px solid orange;
+    height: 50vh;
+  }
+}
+
+/* @media (max-width: 375px) {
+  .project-grid {
+    height: 130vh;
+    width: 100%;
+  }
+  #gear-grid {
+    height: 140vh;
+  }
+  #CAM-grid {
+    height: 130vh;
+  }
+  #lift-grid {
+    height: 140vh;
+  }
+  #portable-lift-box {
+    height: 40%;
+    width: 98%;
+  }
+  #lift-pic {
+    height: 120%;
+    width: 120%;
+    bottom: 10%;
+    right: 1%;
+  }
+  .FEA-box {
+    height: 80%;
+    width: 49%;
+  }
+  #ANSYS-grid {
+    height: 150vh;
+  } */
+/* } */
+
+/* -------- RESUME PAGE! -------- */
+/* ------------------------------- */
+
+#download-container {
+  height: 10%;
+  width: 100dvw;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid black;
+}
+
+.link-text {
+  border: 2px solid black;
+  border-radius: 40px;
+  height: 50%;
+  width: 12%;
+  overflow: hidden;
+}
+
+#download-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+#download-text,
+.link-text {
+  text-decoration: none;
+  color: black;
+}
+
+.link-text:hover {
+  transform: scale(1.05);
+}
+
+.pdf {
+  /* position: relative;
+  top: 0.7vh; */
+  border: 0px solid black;
+  display: block;
+  height: 80%;
+  width: 100%;
+}
+
+/* -------- RESUME MEDIA Q -------- */
+@media (max-width: 1280px) {
+  .link-text {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 932px) {
+  #download-container {
+    padding-top: 2vh;
+  }
+  .link-text {
+    height: 80%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  #download-container {
+    padding-top: 1vh;
+  }
+  .link-text {
+    height: 70%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .link-text {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  .link-text {
+    height: 50%;
+    width: 50%;
+  }
+}
