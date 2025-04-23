@@ -445,7 +445,7 @@ nav ul li a:active {
 
 #gearbox-vid-1-box,
 #gearbox-vid-2-box {
-  height: 46%;
+  height: 40vh;
   width: 42%;
   border: 1px solid black;
   border-radius: none;
@@ -467,12 +467,12 @@ nav ul li a:active {
 
 /* LIFT */
 #lift-grid {
-  height: 100vh;
+  height: 150vh;
 }
 
 #portable-lift-box {
   height: 80%;
-  width: 90%;
+  width: 100%;
   border: 1px solid black;
   border-radius: none;
   text-align: center;
@@ -730,7 +730,7 @@ nav ul li a:active {
   }
   #portable-lift-box {
     height: 80vw;
-    width: 30vh;
+    width: 50vh;
   }
   #lift-pic {
     height: 120%;
@@ -743,7 +743,7 @@ nav ul li a:active {
   #FEA-bracket-boxes {
     margin-top: -18vh;
     height: 35vh;
-    width: 100%;
+    width: 100vw;
     flex-direction: row;
     border: 0px solid red;
   }
@@ -752,7 +752,7 @@ nav ul li a:active {
     width: 40vw;
   }
   #ANSYS-grid {
-    height: 150vh;
+    height: 110vh;
     border: 0px solid navy;
   }
   #ANSYS-boxes {
